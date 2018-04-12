@@ -1,0 +1,17 @@
+@startuml
+
+rectangle "ESX Cluster" {
+  node node1 <<physical>> {
+    node 1900 <<VM>>
+    node 1901 <<VM>>
+  }
+}
+
+node jumphost <<physical>> as jhost
+
+node laptop
+
+node1 -- jhost
+jhost -- laptop
+
+@enduml
